@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Control de Servomotores"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- Grupo Servo 1 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardServo1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="34dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/servo1HorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Servo 1 Horizontal: 90"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?android:textColorPrimary" />
+
+            <SeekBar
+                android:id="@+id/servo1HorSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="180"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Grupo Servo 2 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardServo2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/cardServo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/servo2HorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Servo 2 Horizontal: 90"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?android:textColorPrimary" />
+
+            <SeekBar
+                android:id="@+id/servo2HorSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="180"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botón Conectar -->
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Conectar"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:backgroundTint="#1576d6"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/cardServo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
