@@ -80,14 +80,15 @@ public class MainActivity extends AppCompatActivity {
                 servo2HorAngle = progress;
                 servo2HorTextView.setText("Servo 2: " + progress);
             }
-            sendAnglesToBluetooth();
         }
 
         @Override
         public void onStartTrackingTouch(SeekBar seekBar) {}
 
         @Override
-        public void onStopTrackingTouch(SeekBar seekBar) {}
+        public void onStopTrackingTouch(SeekBar seekBar) {
+            sendAnglesToBluetooth();
+        }
     };
 
     private void sendAnglesToBluetooth() {

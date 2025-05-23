@@ -56,6 +56,7 @@ public class BluetoothService {
             Toast.makeText(context, "Conectado al módulo Bluetooth", Toast.LENGTH_SHORT).show();
         }   catch (IOException e) {
             Toast.makeText(context, "Error al conectar: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Log.d("BluetoothService", "Error al conectar: " + e.getMessage());
         }
     }
 
@@ -65,7 +66,8 @@ public class BluetoothService {
                 outputStream.write(data.getBytes());
                 Log.d("BluetootService", "Enviado: " + data);
             } else {
-                Log.d("BluetootService", "No se ha establecido conexión correctamente: " + data);
+                Log.d("BluetootService", "Error al envíar datos: " + data);
+                connect();
             }
         } catch (IOException e) {
             Toast.makeText(context, "Error al enviar datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
