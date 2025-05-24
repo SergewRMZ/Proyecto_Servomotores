@@ -43,16 +43,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Servo 1 Horizontal: 90"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="?android:textColorPrimary" />
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/servo1VerSeekBar"
+                android:layout_width="250dp"
+                android:layout_height="189dp"
+                android:layout_gravity="center_horizontal"
+                android:max="180"
+                android:rotation="270" />
 
             <SeekBar
                 android:id="@+id/servo1HorSeekBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="180"
-                android:layout_marginTop="12dp" />
+                android:layout_marginTop="12dp"
+                android:max="180" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -84,6 +92,14 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="?android:textColorPrimary" />
+
+            <SeekBar
+                android:id="@+id/servo2VerSeekBar"
+                android:layout_width="250dp"
+                android:layout_height="214dp"
+                android:layout_gravity="center_horizontal"
+                android:max="180"
+                android:rotation="270" />
 
             <SeekBar
                 android:id="@+id/servo2HorSeekBar"
